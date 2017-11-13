@@ -57,16 +57,16 @@
 			"revisionTime": "2016-07-16T20:46:20Z"
 		},
 		{
-			"checksumSHA1": "GLNCOdn8jAHeCQSuDNdgSIYNlhM=",
+			"checksumSHA1": "bT5mzww0OuIAxq6R+PP/fArECi4=",
 			"path": "github.com/lox/bintest",
-			"revision": "04ae4ffc42d49c49caa97d26c7c88795251144f4",
-			"revisionTime": "2017-11-08T00:12:52Z"
+			"revision": "830cc3d153737fef9c1182a0596c4c26bdced420",
+			"revisionTime": "2017-10-26T00:18:18Z"
 		},
 		{
-			"checksumSHA1": "vtvVqCnKI84k5jo9sfuGsNlFUKM=",
+			"checksumSHA1": "VplXHeTeoaW/j8w04oDusY8QTFk=",
 			"path": "github.com/lox/bintest/proxy",
-			"revision": "04ae4ffc42d49c49caa97d26c7c88795251144f4",
-			"revisionTime": "2017-11-08T00:12:52Z"
+			"revision": "830cc3d153737fef9c1182a0596c4c26bdced420",
+			"revisionTime": "2017-10-26T00:18:18Z"
 		},
 		{
 			"checksumSHA1": "R8z+BOS81hOWgcqymuVWHNta/yc=",
