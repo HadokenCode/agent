@@ -45,7 +45,7 @@ func (r *AgentPool) Start() error {
 
 	for i := 0; i < r.Concurrency; i++ {
 		if r.Concurrency == 1 {
-			logger.Info("Registering agent with Buildkite...", i+1, r.Concurrency)
+			logger.Info("Registering agent with Buildkite...")
 		} else {
 			logger.Info("Registering agent %d of %d with Buildkite...", i+1, r.Concurrency)
 		}
