@@ -57,6 +57,7 @@ type AgentStartConfig struct {
 	Debug                        bool     `cli:"debug"`
 	DebugHTTP                    bool     `cli:"debug-http"`
 	Experiments                  []string `cli:"experiment"`
+	Concurrency                  int      `cli:"concurrency"`
 	/* Deprecated */
 	MetaData        []string `cli:"meta-data" deprecated-and-renamed-to:"Tags"`
 	MetaDataEC2     bool     `cli:"meta-data-ec2" deprecated-and-renamed-to:"TagsFromEC2"`
@@ -244,6 +245,12 @@ var AgentStartCommand = cli.Command{
 			Hidden: true,
 			EnvVar: "BUILDKITE_AGENT_META_DATA_GCP",
 		},
+		cli.IntFlag{
+			Name:   "concurrency",
+			Hidden: true,
+			Value:  1,
+			EnvVar: "BUILDKITE_AGENT_CONCURRENCY",
+		},
 	},
 	Action: func(c *cli.Context) {
 		// The configuration will be loaded into this struct
@@ -296,6 +303,7 @@ var AgentStartCommand = cli.Command{
 			TagsFromGCP:           cfg.TagsFromGCP,
 			WaitForEC2TagsTimeout: ec2TagTimeout,
 			Endpoint:              cfg.Endpoint,
+			Concurrency:           cfg.Concurrency,
 			AgentConfiguration: &agent.AgentConfiguration{
 				BootstrapScript:            cfg.BootstrapScript,
 				BuildPath:                  cfg.BuildPath,
